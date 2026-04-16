@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    res = requests.get("http://127.0.0.1:8000/api")
+    res = requests.get("http://fastapi:8000/api")
     data = res.json()
     return render_template("index.html", message=data["message"])
 
